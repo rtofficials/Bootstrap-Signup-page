@@ -1,0 +1,83 @@
+<!-- THE BOILERPLATE SHOULD NOT BE REMOVED -->
+<!-- Proper naming convention should be used while naming id attributes. -->
+<!-- ADDING A SUCCESS PAGE FOR THE SAME WILL BOOST YOUR CHANCES -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SignUp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/419759261a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-responsive.css">
+
+
+  <div class="log-form">
+    <h2>Enter your details</h2>
+    <form name = "form">
+
+  <!-- username -->
+      <div class="common">
+        <i class="fas fa-user"></i>
+        <input style="margin: none; padding: none;" type="text" class="form-control form-control-lg" title="username" placeholder="username" required />
+      </div>
+
+  <!-- mobile number -->
+        <div class="common">
+          <i class="fas fa-phone"></i>
+        <input  type="tel" id="num" name="num" class="form-control form-control-lg" title="xxx-xxx-xxxx" placeholder="phone no." pattern="^\d{3}-\d{3}-\d{4}$" onsubmit="numcheck()" required>
+      </div>
+      <small id = "numlert"></small>
+
+  <!-- email -->
+      <div class="common">
+        <i class="fas fa-at"></i>
+        <input type="email" id="email" class="form-control form-control-lg" title="email" placeholder="email" required>
+      </div>
+      <small id = "same">eg. example123@mail.com</small>
+
+  <!-- password -->
+      <div class="common">
+        <i class="fas fa-unlock"></i>
+        <input type="password" id="pswd1" name="passwd" class="form-control form-control-lg common" title="password" placeholder="password" required/>
+      </div>
+      <small id="reminder">password must be 8 to 15 characters long and must contain atleast one lowercase letter, one uppercase letter, one numeric digit, and one special character.</small>
+
+  <!-- confirm password -->
+      <div class="common">
+        <i class="far fa-check-circle"></i>
+        <input type="password" id="pswd2" class="form-control form-control-lg" title="cnfpassword" placeholder="confirm password" onkeyup="confirm()" required/>
+        <small id="pswd-alert"></small>
+      </div>
+      <small id="cnfpswd"></small>
+      <br>
+
+  <!-- textarea -->
+      <div>
+        <textarea name="message" class="form-group form-control form-control-lg" id="message" cols="35" rows="4" placeholder="...write here"></textarea>
+      </div>
+
+  <!-- age -->
+      <p style="display : inline">Age:</p>
+      <input style="display : inline" type="radio" id="above" name="age" value="above">
+      <label for="above">Above 18</label>
+      <input style="display : inline" type="radio" id="below" name="age" value="below">
+      <label for="below">Below 18</label>
+      <br><br>
+
+  <!-- submit -->
+      <button type="submit" class="form-row btn btn-outline-primary" onclick="allnumericplusminus(document.passwd)">Submit</button>
+    </form>
+  </div>
+
+</div>
+</body>
+</html>
